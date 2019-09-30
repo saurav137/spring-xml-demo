@@ -22,5 +22,9 @@ public class Main
 //        Movie te = (Movie) context.getBean("textEditor");
         Movie obj = (Movie) context.getBean("Movie");
         obj.showActor();
+        Movie obj1=(Movie) context.getBean("Movie1");
+        obj1.showActor();
+
+        System.out.println(obj1==obj);
     }
 }

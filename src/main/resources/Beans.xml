@@ -25,5 +25,7 @@
     <bean id = "Movie" class = "com.stackroute.domain.Movie">
        <constructor-arg ref="Actor2"/>
     </bean>
-
+    <bean id = "Movie1" class = "com.stackroute.domain.Movie">
+        <constructor-arg ref="Actor"/>
+    </bean>
 </beans>
