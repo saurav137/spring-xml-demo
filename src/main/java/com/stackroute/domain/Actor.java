@@ -5,10 +5,12 @@ public class Actor {
     private int age;
     private String gender;
 
+
     public  Actor(String name,int age,String gender){
-        this.name=name;
+       this.name=name;
         this.age=age;
     this.gender=gender;
+        System.out.println("actor created");
     }
 
     public int getAge() {

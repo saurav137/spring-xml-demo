@@ -5,6 +5,7 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.context.support.AbstractApplicationContext;
 
 import java.beans.Beans;
 
@@ -20,11 +21,10 @@ public class Main
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 
 //        Movie te = (Movie) context.getBean("textEditor");
-        Movie obj = (Movie) context.getBean("Movie2",Movie.class);
-        obj.showActor();
-        Movie obj1=(Movie) context.getBean("Movie1",Movie.class);
-        obj1.showActor();
+        Movie movie = (Movie) context.getBean("movie",Movie.class);
+        movie.showActor();
 
-        System.out.println(obj1==obj);
+
+
     }
 }
