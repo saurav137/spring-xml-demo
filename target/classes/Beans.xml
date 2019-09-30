@@ -22,10 +22,10 @@
         <constructor-arg type="String" value="Female"/>
     </bean>
 
-    <bean id = "Movie" class = "com.stackroute.domain.Movie">
+    <bean id = "Movie" class = "com.stackroute.domain.Movie" scope="singleton">
        <constructor-arg ref="Actor2"/>
     </bean>
-    <bean id = "Movie1" class = "com.stackroute.domain.Movie">
+   <bean name = "Movie1,Movie2" class = "com.stackroute.domain.Movie">
         <constructor-arg ref="Actor"/>
     </bean>
 </beans>

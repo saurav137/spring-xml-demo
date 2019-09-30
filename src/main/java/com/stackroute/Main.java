@@ -20,9 +20,9 @@ public class Main
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 
 //        Movie te = (Movie) context.getBean("textEditor");
-        Movie obj = (Movie) context.getBean("Movie");
+        Movie obj = (Movie) context.getBean("Movie2",Movie.class);
         obj.showActor();
-        Movie obj1=(Movie) context.getBean("Movie1");
+        Movie obj1=(Movie) context.getBean("Movie1",Movie.class);
         obj1.showActor();
 
         System.out.println(obj1==obj);
