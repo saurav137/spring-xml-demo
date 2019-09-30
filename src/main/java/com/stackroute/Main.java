@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.domain.BeanLifecycleDemo;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -19,10 +20,10 @@ public class Main
     public static void main ( String[] args )
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-
+        ((AbstractApplicationContext)context).registerShutdownHook();
 //        Movie te = (Movie) context.getBean("textEditor");
-        Movie movie = (Movie) context.getBean("movieBean",Movie.class);
-        movie.showActor();
+        BeanLifecycleDemo beanLifecycleDemo = (BeanLifecycleDemo) context.getBean("Lifecycle",BeanLifecycleDemo.class);
+        beanLifecycleDemo.show();
 
 
 
