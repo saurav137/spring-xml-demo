@@ -1,28 +1,23 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 
-public class BeanLifecycleDemo implements InitializingBean, DisposableBean {
+public class BeanLifecycleDemo implements BeanPostProcessor {
 
-    public void show(){
-        System.out.println("working in Bean Life cycle demo");
-    }
-    public void customInit(){
-        System.out.println("Started even before starting");
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        System.out.println(beanName);
+        System.out.println("After Init");
+        return bean;
     }
 
     @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("Started");
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        System.out.println(beanName);
+        System.out.println("Before init");
+        return bean;
     }
-
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("Ended");
-    }
-   public void customDestroy(){
-       System.out.println("Ending here");
-    }
-
 }

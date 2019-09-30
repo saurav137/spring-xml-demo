@@ -23,7 +23,7 @@ public class Main
         ((AbstractApplicationContext)context).registerShutdownHook();
 //        Movie te = (Movie) context.getBean("textEditor");
         BeanLifecycleDemo beanLifecycleDemo = (BeanLifecycleDemo) context.getBean("Lifecycle",BeanLifecycleDemo.class);
-        beanLifecycleDemo.show();
+       // beanLifecycleDemo.show();
 
 
 

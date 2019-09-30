@@ -28,7 +28,7 @@
     <bean id = "movieBean" class = "com.stackroute.domain.Movie"  autowire="byType" >
 
     </bean>
-    <bean id = "Lifecycle" class = "com.stackroute.domain.BeanLifecycleDemo" init-method="customInit" destroy-method="customDestroy" >
+    <bean id = "Lifecycle" class = "com.stackroute.domain.BeanLifecycleDemo" >
     </bean>
 
 </beans>

@@ -2,7 +2,7 @@ package com.stackroute.domain;
 
 import org.springframework.beans.factory.BeanNameAware;
 
-public class Actor implements BeanNameAware {
+public class Actor {
     private String name;
     private int age;
     private String gender;
@@ -28,9 +28,6 @@ public class Actor implements BeanNameAware {
     }
 
 
-    @Override
-    public void setBeanName(String s) {
-        System.out.println(s);
-    }
+
 }
 
