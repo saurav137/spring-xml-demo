@@ -1,6 +1,8 @@
 package com.stackroute.domain;
 
-public class Actor {
+import org.springframework.beans.factory.BeanNameAware;
+
+public class Actor implements BeanNameAware {
     private String name;
     private int age;
     private String gender;
@@ -23,6 +25,12 @@ public class Actor {
 
     public String getGender() {
         return gender;
+    }
+
+
+    @Override
+    public void setBeanName(String s) {
+        System.out.println(s);
     }
 }
 
