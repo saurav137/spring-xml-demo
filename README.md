@@ -1,4 +1,4 @@
-# spring-annotations-demo
+# spring-xml-demo
 
 
 Create a Maven project and add required dependency of spring-context 5.1.4.RELEASE
