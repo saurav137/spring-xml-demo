@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContextAware;
 public class Movie implements ApplicationContextAware, BeanNameAware , BeanFactoryAware {
 
    private Actor actor;
-
+  private int age;
    private ApplicationContext app;
    private BeanFactory factory;
     public void setActor(Actor actor) {
@@ -25,9 +25,15 @@ public class Movie implements ApplicationContextAware, BeanNameAware , BeanFacto
       //  actor.pump();
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
             this.app=applicationContext;
+         //   System.out.println("application");
+
     }
 
     @Override
@@ -39,5 +45,9 @@ public class Movie implements ApplicationContextAware, BeanNameAware , BeanFacto
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         this.factory=beanFactory;
 
+    }
+
+    public int getAge() {
+        return age;
     }
 }
